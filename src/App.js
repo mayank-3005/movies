@@ -6,7 +6,6 @@ import MovieDetails from "./components/MovieDetails";
 const App = () => {
   return (
     <Router>
-    <header/>
       <Routes>
         <Route path="/" element={<MovieSearchApp />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
