@@ -82,7 +82,7 @@ const MovieDetails = () => {
 
       <div className="mt-6">
         <h2 className="text-2xl font-bold mb-4">Cast</h2>
-        <div className="flex gap-4">
+        <div className="grid md:grid-cols-5 grid-cols-2 gap-4">
           {cast.slice(0, 5).map((actor) => (
             <div key={actor.id} className="flex flex-col items-center mr-4 mb-4">
               <img
@@ -100,7 +100,7 @@ const MovieDetails = () => {
       <div className="mt-6">
         <h2 className="text-2xl font-bold mb-4">Trailers</h2>
         {trailers.length > 0 ? (
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-4 gap-4">
             {trailers.map((trailer) => (
               <div key={trailer.id} className="mb-4 w-full md:w-full lg:w-full">
                 <iframe

@@ -12,7 +12,7 @@ const MovieCard = ({ movie }) => {
         <img
           src={posterUrl}
           alt={movie.title}
-          className="w-full h-48 object-scale-down"
+          className="w-full md:h-48 h-auto object-cover md:object-scale-down"
         />
         <div className="p-4 text-center">
           <h3 className="text-xl font-semibold text-white truncate">{movie.title}</h3>
