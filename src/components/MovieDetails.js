@@ -16,26 +16,18 @@ const MovieDetails = () => {
     const fetchMovieDetails = async () => {
       try {
         setLoading(true);
-
-        // Fetch movie details
         const movieResponse = await axios.get(`https://api.themoviedb.org/3/movie/${id}`, {
           params: { api_key: apiKey },
         });
         setMovie(movieResponse.data);
-
-        // Fetch movie cast
         const castResponse = await axios.get(`https://api.themoviedb.org/3/movie/${id}/credits`, {
           params: { api_key: apiKey },
         });
         setCast(castResponse.data.cast);
-
-        // Fetch movie trailers
         const trailerResponse = await axios.get(`https://api.themoviedb.org/3/movie/${id}/videos`, {
           params: { api_key: apiKey },
         });
         setTrailers(trailerResponse.data.results);
-
-        // Fetch movie reviews
         const reviewsResponse = await axios.get(`https://api.themoviedb.org/3/movie/${id}/reviews`, {
           params: { api_key: apiKey },
         });

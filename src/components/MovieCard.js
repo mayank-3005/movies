@@ -6,9 +6,8 @@ const MovieCard = ({ movie }) => {
     ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
     : "https://via.placeholder.com/200x300";
 
-  // Format the release date
   const formattedDate = movie.release_date
-    ? new Date(movie.release_date).toLocaleDateString("en-GB") // 'en-GB' formats to dd/mm/yyyy
+    ? new Date(movie.release_date).toLocaleDateString("en-GB") 
     : "Unknown Date";
 
   return (
